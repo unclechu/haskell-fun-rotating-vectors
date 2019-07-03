@@ -1,0 +1,39 @@
+name:                rotating-vectors
+version:             0.1.0.0
+# github:              "githubuser/rotating-vectors"
+license:             BSD3
+author:              "Viacheslav Lotsmanov"
+maintainer:          "lotsmanov89@gmail.com"
+copyright:           "2019 Viacheslav Lotsmanov"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            A play with Fourier series.
+category:            Graphics
+
+# description:         Please see the README on GitHub at <https://github.com/githubuser/rotating-vectors#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- base-unicode-symbols
+- vector
+- gloss
+
+ghc-options:
+- -O2
+- -Wincomplete-patterns
+- -funbox-strict-fields
+
+# library:
+#   source-dirs: src
+
+executables:
+  rotating-vectors-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
